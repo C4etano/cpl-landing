@@ -541,3 +541,65 @@ body {
     height: 80px;
   }
 }
+/* garante que nenhum SVG fique gigante por conta própria */
+svg {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+/* ícone do instagram na navbar desktop */
+.nav-icon svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ícones da navbar mobile */
+.nav-mobile-icons a svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* barra mobile centralizada */
+.nav-mobile {
+  display: none;
+  background: #0d1b2a;
+  padding: 12px 16px;
+  border-bottom: 1px solid #1e2d3d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-mobile-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.nav-mobile-icons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-mobile-comprar {
+  min-width: 130px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+}
